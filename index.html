@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Adam Cowher - Portfolio App</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="enabler.js" defer></script>
+
+</head>
+
+<body style="background-color: #323232;">
+    <nav class="navbar navbar-expand-md navbar-light" style="background-color: #C59C4E;">
+        <div class="container">
+            <a class="navbar-brand" data-bs-toggle="modal" data-bs-target="#reflectionsModal"><img src="logo.jpg"
+                    style="width: 50px; height: 50px; border-radius: 25px" /></a>
+            <div class="modal fade" id="reflectionsModal" tabindex="-1" aria-labelled-by="reflectionsModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="reflectionsModalLabel">Welcome!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>All Elite Wrestling is broadcast live every Wednesday and Friday at 8PM EST only on TNT and TBS!</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: #C59C4E;">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-5">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" />
+                    <button class="btn" type="submit" id="look_for" style="background-color: white;;">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="alert alert-dark" role="alert">
+        <b>NOTE:</b> This is an unofficial fan site. <a href="https://www.allelitewrestling.com/" class="alert-link">Click here to visit the official AEW site!</a>
+      </div>
+    <br>
+    <h1 style="text-align:center; color: white;">Welcome to the unofficial AEW fan site!</h1>
+    <h3 style="text-align:center; color: white;">Here you'll find information on all your favorite AEW wrestlers.</h3>
+    <div class="container-fluid">
+        <div class="row row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5"></div>
+        <div class="col m-5">
+            <div class="row m-5">
+                <h3 style="color: white;">Upcoming AEW Events</h3>
+                <div class="col col-sm-10 col-md-3 carousel-area">
+                    <div id="course_carousel" class="carousel carousel-light" data-bs-ride="carousel"
+                        data-bs-interval="2000">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#course-carousel" data-bs-slide-to="0"
+                                class="active"></button>
+                            <button type="button" data-bs-target="#course-carousel" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#course-carousel" data-bs-slide-to="2"></button>
+                            <button type="button" data-bs-target="#course-carousel" data-bs-slide-to="3"></button>
+                        </div>
+                        <div class="carousel-inner">
+
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="event1.jpg" height:200px
+                                    alt="AEW Dynamite/Rampage: Milwaukee" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="event2.jpg" alt="AEW Dynamite/Rampage: Pittsburgh" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="event3.jpg" alt="AEW Dynamite/Rampage: Sunrise" />
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="event4.jpg" alt="AEW Dynamite/Rampage: Baltimore" />
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#course_carousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#course_carousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col  row-col-sm-1 accordion-area">
+                    <h3 style="color: white;">Recent News</h3>
+                    <div class="accordion" id="accordionRecipes">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Backstage News On Santana's Current AEW Status
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                aria-labelledby="Backstage News On Santana's Current AEW Status"
+                                data-bs-parent="#accordionRecipes">
+                                <div class="accordion-body">
+                                    Proud and Powerful, one of the first great tag teams to sign to AEW in 2019, has
+                                    been out of commission since Santana suffered a severe knee injury in last year's
+                                    Blood and Guts match. While Ortiz has continued to compete sporadically on AEW and
+                                    Ring of Honor television, the relationship between the tag team partners is
+                                    seemingly strained, leading many to question what Santana will do when he recovers
+                                    from his injury and whether or not he will remain with AEW when he returns to pro
+                                    wrestling. It seems as though, at least for right now, Santana remains under
+                                    contract for AEW, according to recent reports from Fightful Select. Santana is
+                                    currently still with the company and has been paid for the duration of his injury.
+                                    This may come as a surprise to many fans familiar with Santana's morale ahead of his
+                                    injury; The former Inner Circle member was seemingly counting down the days until
+                                    his AEW contract expired in tweets that have since been deleted before being
+                                    sidelined last June.
+                                    <br>
+                                    <a
+                                        href="https://www.wrestlinginc.com/1252776/backstage-news-on-santanas-current-aew-status/">Read
+                                        More Here</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                    Matches Announced For 4/12 AEW Dynamite, Including Orange Cassidy Title Defense
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="Matches Announced For 4/12 AEW Dynamite, Including Orange Cassidy Title Defense"
+                                data-bs-parent="#accordionRecipes">
+                                <div class="accordion-body">
+                                    All Elite Wrestling's flagship show, "AEW Dynamite," will return to Milwaukee,
+                                    Wisconsin for the first time in ten months this upcoming Wednesday. While the card
+                                    is yet to be finalized, some key matches have been announced for April 12, including
+                                    two special singles matches, an AEW International Championship match, and more.
+
+                                    After merging Mogul Affiliates with The Embassy last Friday on "AEW Rampage," Swerve
+                                    Strickland will reignite his long-time feud against Darby Allin on Wednesday night.
+                                    The two Washington natives have only met once before in AEW, but their matches
+                                    throughout the North American independent circuit have helped make them the
+                                    wrestlers they are today. This match could serve as yet another feather in Darby
+                                    Allin's cap as he continues to pursue MJF's AEW World Championship.
+                                    <br>
+                                    <a
+                                        href="https://www.wrestlinginc.com/1252747/matches-announced-for-412-aew-dynamite-including-orange-cassidy-title-defense/">Read
+                                        More Here</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                    Swerve Strickland Announces Himself As Nick Wayne's Inaugural AEW Opponent
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="Swerve Strickland Announces Himself As Nick Wayne's Inaugural AEW Opponent"
+                                data-bs-parent="#accordionRecipes">
+                                <div class="accordion-body">
+                                    The first match is set for the July 12 episode of "AEW Dynamite" as Swerve
+                                    Strickland will take on Nick Wayne.
+
+                                    At DEFY Wrestling's event on April 8, 17-year-old Wayne defeated Strickland to win
+                                    the DEFY World Championship. Following the bout, Strickland grabbed a microphone and
+                                    announced that he will be Wayne's first AEW opponent on July 12 in Saskatoon,
+                                    Saskatchewan, Canada, just one day after Wayne turns 18.
+
+                                    In February 2022, Wayne signed an "apprenticeship" deal with AEW when he was 16.
+                                    Tony Khan previously stated that Darby Allin helped put Wayne on his radar and
+                                    agreed to let him compete in AEW once he reaches the legal adult age. Since then,
+                                    the rising star has remained active on the indie scene in promotions such as DEFY
+                                    and Game Changer Wrestling. Most recently, he scored a singles win over "The King of
+                                    the Indies" Matt Cardona and has regularly teamed with Jordan Oliver.
+                                    <br>
+                                    <a
+                                        href="https://www.wrestlinginc.com/1252644/swerve-strickland-announces-himself-as-nick-waynes-inaugural-aew-opponent/">Read
+                                        More Here</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                    Saraya Discusses Process Of Learning And Second-Guessing Upon Her Return To
+                                    Wrestling In AEW
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse"
+                                aria-labelledby="Saraya Discusses Process Of Learning And Second-Guessing Upon Her Return To Wrestling In AEW"
+                                data-bs-parent="#accordionRecipes">
+                                <div class="accordion-body">
+                                    Upon her return to wrestling last fall, Saraya admits she initially struggled with
+                                    the adjustment, both on the microphone and in the ring. During one of her earliest
+                                    AEW appearances, Saraya referenced her transition away from WWE when she cut a promo
+                                    claiming it was nice to work for a boss — Tony Khan — that actually listens to her.
+                                    This specific line drew a mixed response from fans, compelling Saraya to address it
+                                    on Twitter. The former Paige said she felt "rusty" during the onscreen performance,
+                                    but on a recent "Busted Open Radio," she revealed that the controversial promo
+                                    affected her much deeper. "I was so mortified by the promo myself that I actually
+                                    second-guessed coming back altogether," she said. "'Did I just make a mistake? Did I
+                                    make myself look so awful?'"
+
+                                    Despite the rough start, Saraya gradually regained her footing on the mic. Former
+                                    AEW World Champion Jon Moxley later advised her to "speak from the heart," and
+                                    eventually, her confidence grew back. As she got more comfortable speaking again,
+                                    Saraya had to tackle another obstacle — her in-ring return. On the November 9 "AEW
+                                    Dynamite," Saraya dropped the exciting news that she'd been cleared to resume
+                                    in-ring competition after almost five years away from the squared circle. As her
+                                    redemption arc began though, it took time for Saraya to reacquaint herself with the
+                                    routine.
+                                    <br>
+                                    <a
+                                        href="https://www.wrestlinginc.com/1251823/saraya-discusses-process-of-learning-and-second-guessing-upon-her-return-to-wrestling-in-aew/">Read
+                                        More Here</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card my-1 m-5" style="width: 200px;">
+                    <div class="card-header" style="text-align: center;">World Champion</div>
+                    <img class="card-img" src="worldchamp.jpg" alt="" />
+                    <div class="card-body">
+                        <div class="card-title" style="text-align: center;">MJF (Maxwell Jacob Friedman)</div>
+                        <p class="card-text" style="text-align: center;">Champ for 75+ days</p>
+                        <button class="btn btn-md d-block" style="background-color: #C59C4E;" data-bs-container="body"
+                            data-bs-toggle="popover" data-bs-placement="right" title="How did he win?"
+                            data-bs-content="MJF captured the AEW World Championship on November 19, 2022 at the annual AEW Full Gear PPV in Newark, NJ at the sold-out Prudential Center. MJF defeated Jon Moxley in the main event via pinfall victory and had become the AEW World Champion.">
+                            <span style="margin-left: 10px">Learn More...</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card my-1 m-5" style="width: 200px;">
+                    <div class="card-header" style="text-align: center;">Women's World Champion</div>
+                    <img class="card-img" src="womenschamp.jpg" alt="" />
+                    <div class="card-body">
+                        <div class="card-title" style="text-align: center;">Jamie Hayter</div>
+                        <p class="card-text" style="text-align: center;">Champ for 72+ days</p>
+                        <button class="btn btn-md d-block" style="background-color: #C59C4E;" data-bs-container="body"
+                            data-bs-toggle="popover" data-bs-placement="right" title="How did she win?"
+                            data-bs-content="Jamie Hayter won the AEW Women's World Championship on November 19, 2022 at the annual AEW Full Gear PPV in Newark,NJ at the sold-out Prudential Center. Jamie Hayter defeated Toni Storm via pinfall and ended Storm's 76 day reign to become the AEW Women's Champion.">
+                            <span style="margin-left: 10px">Learn More...</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card my-1 m-5" style="width: 200px;">
+                    <div class="card-header" style="text-align: center;">TBS Champion</div>
+                    <img class="card-img" src="tbschamp.jpg" alt="" />
+                    <div class="card-body">
+                        <div class="card-title" style="text-align: center;">Jade Cargill</div>
+                        <p class="card-text" style="text-align: center;">Champ for 390+ days</p>
+                        <button class="btn btn-md d-block" style="background-color: #C59C4E;" data-bs-container="body"
+                            data-bs-toggle="popover" data-bs-placement="right" title="How did she win?"
+                            data-bs-content="Jade Cargill became the inaugural TBS champion in Newark, NJ at the Prudential Center on January 5, 2022 at the AEW Dynamite debut on TBS Network. Jade Cargill defeated Ruby Soho in the 12-woman tournament finals via pinfall.">
+                            <span style="margin-left: 10px">Learn More...</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card my-1 m-5" style="width: 200px;">
+                    <div class="card-header" style="text-align: center;">World Tag Team Champions</div>
+                    <img class="card-img" src="tagchamp.jpg" alt="" />
+                    <div class="card-body">
+                        <div class="card-title" style="text-align: center;">FTR (Cash Wheeler and Dax Harwood)</div>
+                        <p class="card-text" style="text-align: center;">Champs for 1+ days</p>
+                        <button class="btn btn-md d-block" style="background-color: #C59C4E;" data-bs-container="body"
+                            data-bs-toggle="popover" data-bs-placement="right" title="How did they win?"
+                            data-bs-content="FTR (Cash Wheeler & Dax Harwood) captured the AEW World Tag Team titles in Long Island, NY at the UBS Arena on April 5, 2023 in the main event of AEW Dynamite. FTR defeated The Gunns via pinfall to end their 57 day reign.">
+                            <span style="margin-left: 10px">Learn More...</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card my-1 m-5" style="width: 200px;">
+                    <div class="card-header" style="text-align: center;">International Champion</div>
+                    <img class="card-img" src="internationalchamp.jpg" alt="" />
+                    <div class="card-body">
+                        <div class="card-title" style="text-align: center;">Orange Cassidy</div>
+                        <p class="card-text" style="text-align: center;">Champ for 1+ days</p>
+                        <button class="btn btn-md d-block" style="background-color: #C59C4E;" data-bs-container="body"
+                            data-bs-toggle="popover" data-bs-placement="right" title="How did he win?"
+                            data-bs-content="Orange Cassidy became the first AEW International Champion in Winnipeg, MB at the Canada Life Centre on March 15th, 2023 on AEW Dynamite: Winnipeg. Cassidy defeated Jeff Jarrett in a singles match via pinfall to become the inaugural champion.">
+                            <span style="margin-left: 10px">Learn More...</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card my-1 m-5" style="width: 200px;">
+                    <div class="card-header" style="text-align: center;">TNT Champion</div>
+                    <img class="card-img" src="tntchamp.jpg" alt="" />
+                    <div class="card-body">
+                        <div class="card-title" style="text-align: center;">Powerhouse Hobbs</div>
+                        <p class="card-text" style="text-align: center;">Champ for 1+ days</p>
+                        <button class="btn btn-md d-block" style="background-color: #C59C4E;" data-bs-container="body"
+                            data-bs-toggle="popover" data-bs-placement="right" title="How did he win?"
+                            data-bs-content="The 2023 Face of the Revolution winner Powerhouse Hobbs became the TNT Champion on March 8, 2023 in the main event of AEW Dynamite. Hobbs defeated Wardlow in a Falls-Count Anywhere match in Sacramento, CA at the Golden1Center. This marked the first ever championship for Hobbs in AEW.">
+                            <span style="margin-left: 10px">Learn More...</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
